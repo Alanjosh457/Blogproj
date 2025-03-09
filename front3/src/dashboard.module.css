@@ -1,0 +1,173 @@
+.container {
+    max-width: 900px; /* Slightly wider for better spacing */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Updated: Posts are now in a grid layout */
+  .postsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 posts per row */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 15%;
+    margin-left: 15%;
+  }
+  
+  /* Fixed width and height for post cards */
+  .postCard {
+    background: white;
+    width: 250px; /* Fixed width */
+    height: 280px; /* Fixed height */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Prevents text overflow */
+  }
+  
+  /* Hover effect */
+  .postCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .postTitle {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Prevents title overflow */
+  }
+  
+  .postSnippet {
+    font-size: 1rem;
+    color: #555;
+    flex-grow: 1; /* Takes remaining space */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Keeps text in one line */
+  }
+  
+  .postAuthor {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 10px;
+  }
+  
+  .postDate {
+    font-size: 0.8rem;
+    color: #999;
+  }
+  
+  /* Message when no posts are available */
+  .noPosts {
+    font-size: 1.2rem;
+    color: #888;
+  }
+  
+  /* Pagination */
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+ 
+  
+ 
+  
+  .pageButton:disabled {
+ 
+    cursor: not-allowed;
+  }
+  
+  .pageNumber {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .pageButton{
+    width: 10px;
+    background-color: white;
+    color: black;
+  }
+
+  .pageNumber{
+    margin-left: 1%;
+  }
+
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .pageButton {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .pageButton:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    display: none;
+  }
+  
+  .pageNumber {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    bottom: 2px;
+    margin-left: 20%;
+  }
+  
+  .pageButton {
+ 
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: white;
+    width: 40px;
+  }
+  
+  .pageButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pageNumber {
+    font-weight: bold;
+  }
+
+  .postAuthor{
+    color: #000;
+    font-size: 1em;
+  }
+  

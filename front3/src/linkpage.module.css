@@ -1,0 +1,392 @@
+/* Container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Title */
+  .title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Create Blog Button */
+  .createButton {
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .createButton:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Modal Styling */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 5;
+  }
+  
+  .modalContent h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
+  }
+  
+  .input,
+  .textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .modalButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .button {
+    padding: 10px 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background: #218838;
+  }
+  
+  .cancelButton {
+    padding: 10px 15px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .cancelButton:hover {
+    background: #c82333;
+  }
+  
+  /* Blog Posts Section */
+  .postsContainer {
+    margin-top: 30px;
+  }
+  
+  .postsTitle {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Blog Post Items */
+  .postList {
+    list-style: none;
+    padding: 0;
+    z-index: 0;
+  }
+  
+  .postItem {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    z-index: 0;
+
+  }
+  
+  .postItem:hover {
+    transform: translateY(-3px);
+    background: #f1f1f1;
+  }
+  
+  .postPreview {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .postTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .postSnippet {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .postAuthor {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+  }
+  
+  /* Button Container */
+  .buttonContainer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .editButton,
+  .deleteButton {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .editButton {
+    background: #ffc107;
+    color: black;
+    width: 30px;
+ height: 30px;
+ border-radius: 25px;
+  }
+  
+  .editButton:hover {
+    background: #e0a800;
+  }
+  .pencil{
+margin-left: -5px;  }
+
+.delbin{
+    margin-left: -4.5px; 
+}
+
+
+  .deleteButton {
+    background: #dbdbdb;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+  }
+  
+  .deleteButton:hover {
+    background: #c82333;
+  }
+
+
+
+  .deleteButton,  .editButton{
+    margin-top: 300%;
+  }
+  /* Blog Posts Section */
+.postsContainer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    flex-direction: column;
+  }
+  
+  /* Blog Post Items */
+  .postList {
+    list-style: none;
+    padding: 0;
+    margin-left: 0; /* Align list to the left */
+    gap: 20px;
+  }
+  
+  .postItem {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: 100%; /* Ensure it takes full width */
+    max-width: 250px; /* Optional: Limit max width */
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+    
+  }
+  
+  .postItem:hover {
+    transform: translateY(-3px);
+    background: #f1f1f1;
+  }
+  
+  .postPreview {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .postTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .postSnippet {
+    font-size: 14px;
+    color: #555;
+  }
+  
+
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .pageButton {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .pageButton:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    display: none;
+  }
+  
+  .pageNumber {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    bottom: 2px;
+  }
+  
+  .pageButton {
+ 
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: white;
+    width: 40px;
+  }
+  
+  .pageButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pageNumber {
+    font-weight: bold;
+  }
+  
+  .postItem {
+    width: 400px;  /* Set fixed width */
+    height: 300px; /* Set fixed height */
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  .postPreview {
+    cursor: pointer;
+    flex-grow: 1;
+  }
+  
+  .postTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .postSnippet {
+    font-size: 14px;
+    color: #555;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+ 
+  
+  .postAuthor{
+    color: #000;
+    font-size: 1em;
+  }
+  
+.postDate{
+  font-size: 0.8em;
+  
+
+}
+.postsContainer{
+  width: 100%;
+}
+
+.postList{
+  width: 1000px;
+}
+.editButton,.deleteButton{
+ margin-top: 10%;
+
+}
