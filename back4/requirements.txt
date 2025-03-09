@@ -11,6 +11,7 @@ asyncpg  # Async PostgreSQL driver (needed for async SQLAlchemy)
 pydantic
 passlib[bcrypt]  # Secure password hashing
 pyjwt  # JSON Web Token (JWT) authentication
+python-jose[cryptography]  # JWT authentication and token signing
 
 # Environment Variable Management
 python-dotenv  # Loads .env files
