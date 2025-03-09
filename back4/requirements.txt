@@ -1,8 +1,37 @@
+# Core FastAPI Dependencies
 fastapi
 uvicorn
+
+# Database & ORM
 sqlalchemy
-psycopg2
+psycopg2  # Use asyncpg if using async SQLAlchemy
+asyncpg  # Async PostgreSQL driver (needed for async SQLAlchemy)
+
+# Data Validation & Security
 pydantic
-passlib
-python-dotenv
-pyjwt
+passlib[bcrypt]  # Secure password hashing
+pyjwt  # JSON Web Token (JWT) authentication
+
+# Environment Variable Management
+python-dotenv  # Loads .env files
+
+# Database Migrations
+alembic  # Handles database migrations for SQLAlchemy
+
+# CORS (for frontend API calls)
+fastapi[all]  # Includes CORS, WebSockets, and other utilities
+
+# HTTP Client (For Making API Requests)
+httpx  # Alternative to requests, supports async calls
+
+# Background Tasks & Caching
+celery  # Background task queue (for async processing)
+redis  # In-memory database for caching
+
+# WebSockets & Real-time Features
+websockets  # Required for WebSocket support in FastAPI
+starlette  # FastAPI is built on Starlette (included but can be specified)
+
+# Deployment & Performance Optimization
+gunicorn  # Production WSGI server
+loguru  # Better logging

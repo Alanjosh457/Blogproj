@@ -19,7 +19,6 @@ import BlogPage from './Blogpage';
 
 const App = () => {
   const location = useLocation();
- 
 
   const showNavbar = ['/dash','/link'].some((path) =>
     location.pathname.startsWith(path)
